@@ -1,6 +1,6 @@
 # ISSUES 
 # ACCOUNT SIGN UP 
-# DOES NOT SHOW USER BALANCE AFTER WITHDRAW 
+
 
 
 class ATM:
@@ -22,6 +22,8 @@ class ATM:
         else:
             self.balance -= amount
             print(f"${amount} withdrawn successfully.")
+            print("Here is your updated balance: ")
+            self.check_balance() 
 
 def main():
     atm = ATM()

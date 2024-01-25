@@ -1,10 +1,11 @@
 
 # ISSUES WITH THIS VERSION 
+# IT DOES NOT PROMPT THE USER TO PERFORM ANOTHER CALCULATION OR LEAVE THE PROGRAM 
+
+# VERSION 2 
 
 
-
-
-
+# functions did not change from the first version 
 def add(x, y):
     return x + y 
 
@@ -39,14 +40,19 @@ def main():
         
         
         elif user_input in ('add', 'subtract', 'divide', 'multiply'):
+            
             while True:
+                # try and catch block 
+                # helps catch errors from user 
                 try:
                     firstNumber = float(input("Enter first number: "))
                     break 
+                # value error 
                 except ValueError:
                     print("Invalid number, please try again")
 
             while True:
+                    # same for second entry 
                     try:
                         secondNumber = float(input("Enter second number: "))
                         break 

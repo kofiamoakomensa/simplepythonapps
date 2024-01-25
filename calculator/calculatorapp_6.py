@@ -10,6 +10,7 @@ def get_number(prompt):
 
 def main(): 
     # lambda functions for arithmetic operations 
+    # what is the difference between lambda vs normal functions ?? 
     add = lambda x, y: x + y 
     subtract = lambda x, y: x - y 
     multiply = lambda x, y: x * y 

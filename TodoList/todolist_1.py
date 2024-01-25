@@ -1,15 +1,24 @@
+
+# create a class todolist 
 class ToDoList:
+    # what is this ?? 
     def __init__(self):
+        # all tasks will be put into a list 
         self.tasks = []
 
+
+    # action to add atask 
     def add_task(self, task):
         self.tasks.append({'task': task, 'completed': False})
-
+    
+    # action to view task 
     def view_tasks(self):
         for index, task in enumerate(self.tasks, start=1):
             status = 'Done' if task['completed'] else 'Pending'
             print(f"{index}. {task['task']} - {status}")
 
+
+   # action to complete task 
     def complete_task(self, task_number):
         if 0 < task_number <= len(self.tasks):
             self.tasks[task_number - 1]['completed'] = True
@@ -17,6 +26,9 @@ class ToDoList:
         else:
             print("Invalid task number.")
 
+
+
+    # action to delete task 
     def delete_task(self, task_number):
         if 0 < task_number <= len(self.tasks):
             del self.tasks[task_number - 1]

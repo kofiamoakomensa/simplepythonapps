@@ -32,6 +32,7 @@ def main():
         
         if user_input == "quit":
             break 
+        # user input is the same as numbers 
         elif user_input in ('1', '2', '3', '4'):
             while True:
                 try:
@@ -47,8 +48,10 @@ def main():
                 except ValueError:
                     print("Invalid Input. Please enter a valid second number")
 
-
+            
+            # if user inputs 1 
             if user_input == "1":
+                # store the called function into result variable 
                 result = add(firstNumber, secondNumber) 
             elif user_input == "2":
                 result = subtract(firstNumber, secondNumber) 
@@ -56,7 +59,7 @@ def main():
                 result = multiply(firstNumber, secondNumber) 
             elif user_input == "4":
                 result = divide(firstNumber, secondNumber) 
-
+            # use the result variable 
             print("The result will be ", result) 
 
 

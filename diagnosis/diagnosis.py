@@ -1,3 +1,7 @@
+# No Exception handling if type in capital case 
+# what if patient symptoms are in different lists 
+
+
 def main():
     # Define a simple symptom to disease mapping
     medical_database = {

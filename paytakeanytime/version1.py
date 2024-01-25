@@ -1,3 +1,14 @@
+# ISSUES WITH THIS 
+
+
+# ADD A FEATURE TO 
+# ALLOW USER TO WHO HAS TRANSFERRED MONEY TO SHOP
+# 1. PICK AN ITEM 
+# 2. GET THE PRICE 
+# 3. CONFIRM TAKE 
+# 4. GET ACCOUNT BALANCE  
+
+
 # User and Shop Data (Hardcoded)
 users = {
     "user1": {"name": "Alice", "balance": 1000},

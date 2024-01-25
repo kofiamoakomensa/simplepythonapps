@@ -1,6 +1,14 @@
 
-# ISSUES WITH THIS 
+# ISSUES WITH THIS ?? 
+# IN ASKING USERS IF THEY WANT TO CONTINUE 
+# PROGRAM NEEDS TO BE SPECIFIC 
+# WHAT IF I TYPE IN J. 
+# WILL IT PROCESS IT AS ALSO QUIT ?? 
 # IS THERE A WAY TO IMPROVE THE APP 
+
+# ISSUE 2 
+# USER HAS TO TYPE IN ALL OF STRINGS FOR IT TO WORK 
+# CHANGE IT TO NUMBERS 
 
 def add(x, y):
     return x + y 
@@ -62,8 +70,11 @@ def main():
 
             # ask if the user wants to perform another calculation 
             another_calculation = input("Do you want to perform another calculation? (yes/no): ")
+            # if users answer is not yes or y 
             if another_calculation.lower() not in ('yes', 'y'):
+                # leave the program 
                 break 
+        # else unknown input try again 
         else:
             print("Unknown input. Please try again")
 
