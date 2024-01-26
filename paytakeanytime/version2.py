@@ -1,11 +1,3 @@
-# ISSUES WITH THIS 
-
-
-# ADD A FEATURE TO 
-# ALLOW USER TO WHO HAS TRANSFERRED MONEY TO SHOP
-# TO SHOW UP IN THE SHOPS ACCOUNT WITH USER NAME 
-
-
 
 users = {
     "user1": {"name": "Alice", "balance": 1000},
@@ -13,8 +5,8 @@ users = {
 }
 
 shops = {
-    "shop1": {"name": "GadgetStore", "balance": 0},
-    "shop2": {"name": "BookWorld", "balance": 0},
+    "shop1": {"name": "GadgetStore", "balance": 0, "transactions": []},
+    "shop2": {"name": "BookWorld", "balance": 0, "transactions": []},
 }
 
 # Function to transfer money
@@ -28,6 +20,7 @@ def transfer_money(user_id, shop_id, amount):
     
     users[user_id]['balance'] -= amount
     shops[shop_id]['balance'] += amount
+    shops[shop_id]['transactions'].append((users[user_id]['name'], amount))
     return f"Transferred {amount} from {users[user_id]['name']} to {shops[shop_id]['name']}."
 
 # Function to display balances
@@ -36,6 +29,8 @@ def display_balances():
         print(f"{user_info['name']} balance: {user_info['balance']}")
     for shop_id, shop_info in shops.items():
         print(f"{shop_info['name']} balance: {shop_info['balance']}")
+        for transaction in shop_info['transactions']:
+            print(f"    {transaction[0]} transferred {transaction[1]}")
 
 # Main command line interface
 def main():
